@@ -37,7 +37,7 @@ It's your job to implement this back-end.
 
 ## Technical requirements for .NET
 
-- Create a new GitHub repository (one per team)
+- Create a new GitHub repository (one per team) and add the teachers to it
 - Use REST (with JSON as the message / body format)
 - Use ASP.NET Core WebApi
 - Use Entity Framework Core
@@ -53,6 +53,10 @@ It's your job to implement this back-end.
 - Setup a transaction per HTTP call (we can help you with this)
 
 ## Architectural Setup
+
+You can choose for yourself if you want to work with a multi- or single-module project. Do remember that you have four days in total for this project and multi-module can bring unnecessary complexities to the table. We advise you to only go for this approach when feeling very confident.   
+
+Guidelines for a multi-module project:
 
 Provide a multi-module setup where each module (not package) represents a 'layer'.
 - Although a Layered architecture might not be the best architecture (for big projects), when used properly(!), it is actually 
@@ -77,15 +81,16 @@ The Parkshark project is supposed to be organized as a project following the SCR
 
 - We want to see a clear visualized **product backlog**
 - We want to see a **project kickoff** followed by **2 sprints** of two days.
-- At the start of the sprint we want to see a **sprint kickoff meeting** defining the **sprint backlog** (estimated and prioritized) of that sprint
+- At the start of the sprint we want to see a **sprint kickoff meeting** defining the **sprint backlog** (estimated and prioritized) of that sprint. Estimations can be done in T-shirt sizes (S,M,L,XL), according to the complexity of the story. Ask us for more info if you're not sure what this means.
 - We want to see a clear visualized sprint backlog and up-to-date kanban board 
 - We want to see **daily standups** (at least once a day on fixed timeslots) discussing the current sprint progress by using a kanban board
 - We want to see a **sprint review** (=demo) and **retrospective** at the end of the project
-- In Sococo we want to see a link to:
+- In your team's Slack channel, we want to see a link to:
     - kanban board
     - team calendar (daily standup, sprint kickoff, scrumboard, whiteboard, ...)
 
 **Project kickoff guidelines:**
+- Choose a team name and create a Slack channel for your team
 - Define team rules
     - Daily standup at X
     - Scrummaster role (fixed, rotating)
@@ -108,8 +113,9 @@ The Parkshark project is supposed to be organized as a project following the SCR
             - Github repository (add Switchfully trainers!)
             - Setup communication channels
 		- Questions?
- - Setup a shared drive to share usefull documentation
+ - Setup a shared drive to share useful documentation
     - domain model, detail of stories, team rules, ...
+- Don't forget to add necessary information to your Slack channel (Kanban board, team calendar, ...)
 
 ## Timing
 
@@ -153,7 +159,7 @@ These companies were never fully merged with ParkShark, they became divisions.
         - A contact person should always have a (valid) e-mail address.
         - A contact person should always have a mobile phone number, or a telephone number. Both are allowed, but at least one is always required!
 - The address consists of a street name, street number, and a postal code
-    - A postal code consist of an actual postal code and a label (e.g. *3000, Leuven*)
+    - A postal code consists of an actual postal code and a label (e.g. *3000, Leuven*)
 - A category is currently restricted to either *underground building* or *above ground building*. However, there can be more in the future (e.g. *street*, *open space*,...).
 - Prioritization: Must-Have
 
