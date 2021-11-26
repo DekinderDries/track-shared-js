@@ -12,7 +12,7 @@ We will start by creating our new application folder. No need to start right-cli
 Angular has a nice way of doing multiple steps by issuing one single command: ``ng new``! Create a new app by typing ``ng new <appName>`` 
 in the terminal. You can choose any name, just remember we're making a dating service for pets :heart_eyes:. Be creative.
   
-- You'll notice some questions being asked while generating your app. We want the default options installed.
+- You'll notice some questions being asked while generating your app. We want the default options installed, but with routing.
   This means selecting:
     - ``stricter type checking``
     - ``routing``
