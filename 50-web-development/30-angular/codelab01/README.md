@@ -43,7 +43,7 @@ We can use interpolation to display the value of this variable in the correspond
 
 ### Set the styling
 - Not necessarily Angular related, but nevertheless very important in a HTML environment. Copy the contents of the ``styles.css`` file to the ``styles.css`` file you can find in
-the root dir of your app. Doing so should give already your app a different look.
+the root dir of your app. Doing so should already give your app a different look.
 
 ## Conclusion
 We now have a working Angular application. We got rid of the default contents and replaced it with the title of the app we're going to build. For now, we only have one component in
