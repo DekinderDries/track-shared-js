@@ -29,7 +29,7 @@ whenever you want.
 
 - **Do not** sell or (re)distribute this repository or any of its included files.
 - **Do not** make this repository or any of its included files available on websites, internal or external networks, 
-social- or other media.
+social or other media.
 - **Do not** edit or modify any of the presentations (included in this repository).
 - **Do not** claim / pass off this repository or any of its included files as your own.
 
