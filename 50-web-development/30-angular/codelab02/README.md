@@ -1,5 +1,24 @@
 # Codelab02 - Basic layout
 
+## Check for routing
+
+Angular should have asked you if you wanted to include routing to your application during setup. Unfortunately, this doesn't always happen, so this part is only for the people who don't have it yet. Check your app folder for a file 
+called ``app-routing.module.ts``. Can't find it? Good, this part is for you! If you do have it, you can move on to the next part.
+
+In your terminal, type ``ng g module app-routing --flat --module=app``. ``--flat`` puts the file in src/app instead of its own folder. ``--module=app`` tells the CLI to register it in the imports array of the AppModule. You will see the
+file is ``app-routing.module.ts`` is created now in your app folder. Change its content with the following:
+
+>> import { NgModule } from '@angular/core'; <br>
+>import { RouterModule, Routes } from '@angular/router'; <br>
+const routes: Routes = []; <br><br>
+@NgModule({ <br>
+imports: [RouterModule.forRoot(routes)], <br>
+exports: [RouterModule] <br>
+}) <br><br>
+export class AppRoutingModule { }
+
+Don't worry yet about the contents of this file. We will learn more about it in a few codelabs. For now, it will suffice to know that this file is going to take care of routing in our app.
+
 ## Let's get a basic layout going
 
 When setting up our frontend, there's A LOT of things we want to get working. The best approach is to do this in small steps. Our first step was setting
