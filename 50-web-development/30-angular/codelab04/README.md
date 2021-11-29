@@ -52,7 +52,7 @@ First of all, we want to invoke our selectPet() function when someone clicks one
 
 ### NgIf
 - Last step to make this first requirement work is adding a new section which shows us what we actually want to see. Binding a click event is not enough in this case, we need to specify what we want to put where on our screen as well. 
-Start by adding the following code to your ``profile.gallery.component.ts`` file.
+Start by adding the following code to your ``profile.gallery.component.html`` file.
   ```
   <div class="col-md-3">
     <div class="gallery-detail">
