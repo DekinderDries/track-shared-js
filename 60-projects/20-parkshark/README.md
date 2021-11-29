@@ -18,7 +18,7 @@ It's your job to implement this back-end.
 
 - Create a new GitHub repository (one per team)
     - Think about the files Git should ignore, do this before making your first commit...
-- Provide a REST(ful) web API (with JSON as the message / body format)
+- Provide a REST(ful) Web API (with JSON as the message / body format)
 - Use Spring Boot (latest release)
 - Use Maven
 - Setup a Jenkins or Travis or GitHub Actions for continuous integration
@@ -26,7 +26,7 @@ It's your job to implement this back-end.
 - Perform logging (use spring-boot-starter's logging dependencies: logback and slf4j)
     - Certainly log all interactions with the application that can be defined as "errors"
         - E.g.: unauthorized access, illegal arguments, exceptions in general,...
-- Include OpenAPI using Swagger(UI) to provide a readable documentation/manual of your REST(ful) web API
+- Include OpenAPI using Swagger(UI) to provide a readable documentation/manual of your REST(ful) Web API
 - use JPA (Hibernate or EclipseLink) in combination with a PostgreSQL or Oracle Database to store and access the data.
     - Setup a proper test configuration, which runs the integration tests against an in-memory database (e.g. H2)
         - Make it a separate technical story.
@@ -37,7 +37,7 @@ It's your job to implement this back-end.
 
 ## Technical requirements for .NET
 
-- Create a new GitHub repository (one per team)
+- Create a new GitHub repository (one per team) and add the teachers to it
 - Use REST (with JSON as the message / body format)
 - Use ASP.NET Core WebApi
 - Use Entity Framework Core
@@ -54,6 +54,10 @@ It's your job to implement this back-end.
 
 ## Architectural Setup
 
+You can choose for yourself if you want to work with a multi- or single-module project. Do remember that you have four days in total for this project and multi-module can bring unnecessary complexities to the table. We advise you to only go for this approach when feeling very confident.   
+
+Guidelines for a multi-module project:
+
 Provide a multi-module setup where each module (not package) represents a 'layer'.
 - Although a Layered architecture might not be the best architecture (for big projects), when used properly(!), it is actually 
 a nice way of separating concerns in your code. Read the following links:
@@ -67,8 +71,8 @@ a nice way of separating concerns in your code. Read the following links:
     - What's the base package for every module?
     - Do you package per feature or per technical component, or a combination of both?
     
-Furthermore, use DTO's for encapsulating the payload of a request or of a response to/of your web API. 
-(and ideally a different DTO for the request and for the response of a call to your web API)
+Furthermore, use DTOs for encapsulating the payload of a request or of a response to/of your Web API. 
+(and ideally a different DTO for the request and for the response of a call to your Web API)
 - https://martinfowler.com/eaaCatalog/dataTransferObject.html  
 
 ## Project requirements
@@ -77,15 +81,16 @@ The Parkshark project is supposed to be organized as a project following the SCR
 
 - We want to see a clear visualized **product backlog**
 - We want to see a **project kickoff** followed by **2 sprints** of two days.
-- At the start of the sprint we want to see a **sprint kickoff meeting** defining the **sprint backlog** (estimated and prioritized) of that sprint
+- At the start of the sprint we want to see a **sprint kickoff meeting** defining the **sprint backlog** (estimated and prioritized) of that sprint. Estimations can be done in T-shirt sizes (S,M,L,XL), according to the complexity of the story. Ask us for more info if you're not sure what this means.
 - We want to see a clear visualized sprint backlog and up-to-date kanban board 
 - We want to see **daily standups** (at least once a day on fixed timeslots) discussing the current sprint progress by using a kanban board
 - We want to see a **sprint review** (=demo) and **retrospective** at the end of the project
-- In Sococo we want to see a link to:
+- In your team's Slack channel, we want to see a link to:
     - kanban board
     - team calendar (daily standup, sprint kickoff, scrumboard, whiteboard, ...)
 
 **Project kickoff guidelines:**
+- Choose a team name and create a Slack channel for your team
 - Define team rules
     - Daily standup at X
     - Scrummaster role (fixed, rotating)
@@ -108,8 +113,9 @@ The Parkshark project is supposed to be organized as a project following the SCR
             - Github repository (add Switchfully trainers!)
             - Setup communication channels
 		- Questions?
- - Setup a shared drive to share usefull documentation
+ - Setup a shared drive to share useful documentation
     - domain model, detail of stories, team rules, ...
+- Don't forget to add necessary information to your Slack channel (Kanban board, team calendar, ...)
 
 ## Timing
 
@@ -148,18 +154,18 @@ These companies were never fully merged with ParkShark, they became divisions.
 **As a Manager I want to create a parking lot.**
 - A parking lot has a name, a category, a (max) capacity, a contact person, and an address
 - A parking lot also has a price per hour for car allocation (parking your car)
-- The contact person has a name, a mobile phone number, a telephone number, an e-mail, and an address
+- The contact person has a name, a mobile phone number, a telephone number, an email, and an address
     - As a means of contact: 
-        - A contact person should always have a (valid) e-mail address.
+        - A contact person should always have a (valid) email address.
         - A contact person should always have a mobile phone number, or a telephone number. Both are allowed, but at least one is always required!
 - The address consists of a street name, street number, and a postal code
-    - A postal code consist of an actual postal code and a label (e.g. *3000, Leuven*)
+    - A postal code consists of an actual postal code and a label (e.g. *3000, Leuven*)
 - A category is currently restricted to either *underground building* or *above ground building*. However, there can be more in the future (e.g. *street*, *open space*,...).
 - Prioritization: Must-Have
 
 ### Story PL2: Get all Parking lots
 **As a Manager I want to get an overview of all parking lots.**
-- The returned parking lots should include the id, name, capacity and the contact person's e-mail + telephone (nothing else)
+- The returned parking lots should include the id, name, capacity and the contact person's email + telephone (nothing else)
 - Prioritization: Must-Have
 
 ### Story PL3: Get a Parking lot

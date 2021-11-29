@@ -12,7 +12,7 @@ We will start by creating our new application folder. No need to start right-cli
 Angular has a nice way of doing multiple steps by issuing one single command: ``ng new``! Create a new app by typing ``ng new <appName>`` 
 in the terminal. You can choose any name, just remember we're making a dating service for pets :heart_eyes:. Be creative.
   
-- You'll notice some questions being asked while generating your app. We want the default options installed.
+- You'll notice some questions being asked while generating your app. We want the default options installed, but with routing.
   This means selecting:
     - ``stricter type checking``
     - ``routing``
@@ -43,7 +43,7 @@ We can use interpolation to display the value of this variable in the correspond
 
 ### Set the styling
 - Not necessarily Angular related, but nevertheless very important in a HTML environment. Copy the contents of the ``styles.css`` file to the ``styles.css`` file you can find in
-the root dir of your app. Doing so should give already your app a different look.
+the root dir of your app. Doing so should already give your app a different look.
 
 ## Conclusion
 We now have a working Angular application. We got rid of the default contents and replaced it with the title of the app we're going to build. For now, we only have one component in
