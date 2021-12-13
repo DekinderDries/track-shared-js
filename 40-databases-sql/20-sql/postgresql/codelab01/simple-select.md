@@ -23,8 +23,8 @@ Or specify your table name in full `schema.table`.
 9. Display the ID, first name, last name and department number for employees working for the shipping department ordered by last name (z-a)
 10. Display the ID, first name, last name and department number for employees working for the shipping department ordered by last name and first name (a-z)
 11. Display the ID, first name and last name of the manager of the shipping department
-12. For each user table you have access to display all information  (tip: use pgAdmin)
-13. Explore all tables (tip: use pgAdmin)  
+12. For each user table you have access to display all information  (tip: use pgAdmin or Intellij)
+13. Explore all tables (tip: use pgAdmin or Intellij)  
 14. For each location display ID, city, state and country code
 15. Display ID, city, state and country code for locations in the United Kingdom
 16. Display the department number and department name for departments located in the United Kingdom
