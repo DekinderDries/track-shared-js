@@ -34,6 +34,7 @@ It's your job to implement this back-end.
     - Write your DDL (create tables,...) in a separate `.sql` file, which you also put under version control.
 - Think about security (Basic Auth. or JWT), but is doesn't have to be a priority.
     - Maybe make it a separate technical story.
+    - You can use our keycloak server (https://keycloak.switchfully.com)
 
 ## Technical requirements for .NET
 
@@ -81,7 +82,7 @@ The Parkshark project is supposed to be organized as a project following the SCR
 
 - We want to see a clear visualized **product backlog**
 - We want to see a **project kickoff** followed by **2 sprints** of two days.
-- At the start of the sprint we want to see a **sprint kickoff meeting** defining the **sprint backlog** (estimated and prioritized) of that sprint. Estimations can be done in T-shirt sizes (S,M,L,XL), according to the complexity of the story. Ask us for more info if you're not sure what this means.
+- At the start of the sprint we want to see a **sprint kickoff meeting** defining the **sprint backlog** (estimated and prioritized) of that sprint.
 - We want to see a clear visualized sprint backlog and up-to-date kanban board 
 - We want to see **daily standups** (at least once a day on fixed timeslots) discussing the current sprint progress by using a kanban board
 - We want to see a **sprint review** (=demo) and **retrospective** at the end of the project
