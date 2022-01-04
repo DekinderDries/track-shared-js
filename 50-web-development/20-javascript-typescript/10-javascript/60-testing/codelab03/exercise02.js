@@ -8,12 +8,17 @@ const ALIGNMENT = {
     GOOD: 'Good Alignment'
 };
 
-function SuperHero(name, alignment) {
-    this.name = name;
-    this.alignment = alignment;
+class SuperHero {
+
+    constructor(name, alignment) {
+        this.name = name;
+        this.alignment = alignment;
+    }
+
+    /* This method is already provided */
+    speak() {
+        return `I am ${this.name}`;
+    }
+
 }
 
-/* This method is already provided */
-SuperHero.prototype.speak = function () {
-    return `I am ${this.name}`;
-};
