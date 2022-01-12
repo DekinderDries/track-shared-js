@@ -73,7 +73,7 @@ Authentication or authorization are completely optional.
         - This should make the form element invalid.
 - Clicking the Cancel button should automatically navigate back to the Item overview.
 - Technical Tip:
-    - Make the counter a reusable component
+    - Make the counter a reusable component or directive
 
 ## Story IT5: View Item Detail
 
