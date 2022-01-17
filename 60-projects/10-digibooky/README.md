@@ -273,6 +273,7 @@ As an accountant I want to mark an invoice as paid, so I can keep track of which
 
 ## Possible expansions
 1. Digibooky can offer e-books, DVDs or any other media.
+2. A review system that will be linked with your facebook page.
 
 ## Story map
 
