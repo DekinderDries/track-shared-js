@@ -2,7 +2,7 @@
 
 ## Let's fire up a ReactJS app
 
-### First step
+### First steps
 Development in ReactJS differs quite a bit from development in Angular. React does not have an extensive CLI to work with. In fact the only thing we need 
 to get a basic ReactJS app going, is our trusty old Node Packet Manager (NPM). You should have it installed by now, but for those who don't, you can find
 it at [the Node.js website](https://nodejs.org/en/). We recommend installing the LTS version. Latest features can be exciting, but the LTS
@@ -39,7 +39,7 @@ In a project structure, it will look like this:
 
 <img src="structure.png" width="244" height="598" />
 
-The **src** directory is where we'll spend most of our time, as it's where the source code for our application lives.
+The **src** directory is where we'll spend most of our time, as it's where the source code for our application lives. In it you see a subfolder called **components**, this is the place where we will store our.... *drumroll*.... components!
 
 The **public** directory contains files that will be read by your browser while you're developing the app; the most important of these is index.html. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the <title> element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
 
@@ -51,11 +51,17 @@ This is our interpretation of a good setup for this app. Other people might have
 doing the right thing. You'll see that when you start looking up certain issues you run into. There's tons of information out there and everyone seems to have a different solution for the same problem. It's normal to feel a bit lost in this and it can get frustrating
 at times. A good rule of thumb is following what you already know about coding. Try to stick to one responsibility per component. Keep code as concise and clear as possible, with the idea that another developer should be able to find his way quick in the codebase always on your mind.
 
-### Components
+You'll notice React uses often uses JSX (there are other types possible). Take a look at [https://reactjs.org/docs/introducing-jsx.html](https://reactjs.org/docs/introducing-jsx.html) to learn more about this syntax extension to JavaScript.
 
-In modern web development, you will notice that most, if not all, of the popular frameworks or libraries work with components.
-### Header
-The first component we will be making is our header. 
+### Conclusion
+We now have a working React application. We got rid of the default contents and replaced it with the title of the app we're going to build. For now, we only have one component in
+this app, which consists of ``App.jsx``, containing the component's logic and template we will be showing in our browser.
 
+You've learned:
+- how to create a new React app with ```create-react-app```.
+- how to start your angular app with ```npm start```.
+- what JSX is and why React recommends you to use it.
+- that a component contains both logic and its template within a single JSX file.
+- to think about the structure of your app before diving into its code.
 
 
