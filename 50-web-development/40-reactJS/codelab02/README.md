@@ -63,7 +63,7 @@ When you save your components and check your application at [http://localhost:30
 
 Copy/paste the code from **app.html** into **App.jsx**. You'll see a lot of code in **App.jsx** already, you can safely delete it all and put the code in the return method of a functional component called **App**.
 * Delete the contents in **App.jsx**. Make this component a functional component that returns the HTML you copied from **app.html**.
-* Add our Header and Footer component in the right place. Inserting a component is nothing more than simply typing **<NameOfYourComponent />**. In our app, this means Header should be right below the opening of our wrapping <div> and Footer goes right above the closing of our wrapping <div>.
+* Add our Header and Footer component in the right place. Inserting a component is nothing more than simply typing **<NameOfYourComponent />**. In our app, this means Header should be right below the opening of our wrapping ```<div>``` and Footer goes right above the closing of our wrapping ```<div>```.
 * If you want an example of how a component can be called, take a look at **index.jsx**. Our application starts there with the calling of our **App** component.
 
 Save all your files and take a look at your app in your browser. Not what you expected? There's one final step we forgot, adding the CSS! Copy the contents in **styles.css** and add them to **index.css** in your app. Copy heart.png and add it to **public/assets/images**. Don't forget to import it in your **Header.jsx** component. Save, take a second look and everything should be okay now!
