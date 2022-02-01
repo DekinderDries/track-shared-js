@@ -1,8 +1,6 @@
 # Codelab02 - Our first components
 
-## Time to fix the basic look of our app
-
-### What are components?
+## What are components?
 
 In modern web development, you will notice that most, if not all, of the popular frameworks or libraries work with components. React is no different. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn’t have any hard rules for what is and isn’t a component – that’s up to you! But how do we define our components?
 
@@ -13,7 +11,7 @@ Defining a component can seem tricky until you have some practice, but the gist 
 
 That second bullet is especially valuable: making a component out of common UI elements allows you to change your code in one place and see those changes everywhere that component is used. Let's start with two components that will be shown all the time in our app!
 
-### Making our Header
+## Making our Header
 
 The first component we will be making is our header. Inside your **src** folder, make a subfolder called **components**. We'll store all of our components in here. Inside that components folder, make a new file and call it **Header.jsx**. Let's add a bit of detail to what a component should consist of first.
 
@@ -46,10 +44,11 @@ add our code. We want to define our title as a constant and call that constant f
 * You will need to import the React library for your component to work. Add ```import { React } from 'react';``` at the top of your file.
 * Define a constant **title** and give it a String value *Petinder*.
 * Copy the HTML code you find in the header.html file in this codelab's folder. Nothing very special going on there, except the way we are showing our constant variable title on the screen. To do this in React, we wrap that variable in curly braces -> **{title}**.
+* One small detail that you might have noticed. In our files, we don't use **class** as CSS tags in our HTML, we use **className**. This is because class is already a reserved keyword in JSX files, hence there is a different notation for our CSS classes: className. Other than that, there is no difference.
 * One very important step still needs to be taken before our component is ready to be used in our app. We need to make sure it is accessible to other components and to do so, we have to **export** it. At the end of your file (outside of your function), add ```export default Header;```. This will export your component, making it visible to other components
   who want to use it.
 
-### Making our Footer
+## Making our Footer
 
 Good job on that header, let's do the same for out footer! You can repeat the same steps, only the look and logic in the footer will of course be slightly different. When your component is set up, copy and paste the code you find in footer.html. You'll notice there is something missing here.
 We want to show the current year in our footer, but we don't want to update it manually whenever a new year hits.
@@ -57,7 +56,7 @@ We want to show the current year in our footer, but we don't want to update it m
 * JavaScript has a Date() functionality, just like Java does. Try to implement it so that it shows you the current year.
 * You might notice something weird in the HTML file. ```{' '}``` is a JSX annotation to show a space, in this case between our current year and Switchfully.
 
-### Showing our components
+## Showing our components
 
 When you save your components and check your application at [http://localhost:3000](http://localhost:3000), you won't see any difference. This makes sense, we have our components but we aren't instructing our application to show them yet. Let's fix this!
 
@@ -68,7 +67,7 @@ Copy/paste the code from **app.html** into **App.jsx**. You'll see a lot of code
 
 Save all your files and take a look at your app in your browser. Not what you expected? There's one final step we forgot, adding the CSS! Copy the contents in **styles.css** and add them to **index.css** in your app. Copy heart.png and add it to **public/assets/images**. Don't forget to import it in your **Header.jsx** component. Save, take a second look and everything should be okay now!
 
-### Conclusion
+## Conclusion
 
 We now have a working React application with our own custom CSS attached to it. There are two components, Header and Footer who are being called from within the App component. They will be shown in every part of your app.
 

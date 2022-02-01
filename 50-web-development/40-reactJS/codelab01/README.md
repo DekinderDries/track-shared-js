@@ -1,8 +1,6 @@
-# Codelab01 - Get started
+# Codelab01 - Let's fire up a ReactJS app
 
-## Let's fire up a ReactJS app
-
-### First steps
+## First steps
 Development in ReactJS differs quite a bit from development in Angular. React does not have an extensive CLI to work with. In fact the only thing we need 
 to get a basic ReactJS app going, is our trusty old Node Packet Manager (NPM). You should have it installed by now, but for those who don't, you can find
 it at [the Node.js website](https://nodejs.org/en/). We recommend installing the LTS version. Latest features can be exciting, but the LTS
@@ -12,7 +10,7 @@ Once you have installed Node, you are good to go! Open up git bash, navigate to 
 dependencies in a newly created folder called Petinder. Node will work its magic and boom... a wild React application will appear! Want to see what you got from this? Type 
 npm start in your app's folder. It will make the application fire up and after a few seconds you will be able to see it working at [http://localhost:3000] (http://localhost:3000)!
 
-### Understanding our application
+## Understanding our application
 It can be tempting to start right away, but this isn't always the best idea. Not just in React but in pretty much everything related to software development. Let's take a moment to think about what our app will look like. What it needs
 to do and what it will consist of. We are going to make an app called Petinder. It's a Tinder service for pets (duh!). Take a look at our working version of this :moneybag: :moneybag: :moneybag: idea [here](https://petinder-react.netlify.app).
 
@@ -53,7 +51,7 @@ at times. A good rule of thumb is following what you already know about coding. 
 
 You'll notice React uses often uses JSX (there are other types possible). Take a look at [https://reactjs.org/docs/introducing-jsx.html](https://reactjs.org/docs/introducing-jsx.html) to learn more about this syntax extension to JavaScript.
 
-### Conclusion
+## Conclusion
 We now have a working React application. We got rid of the default contents and replaced it with the title of the app we're going to build. For now, we only have one component in
 this app, which consists of ``App.jsx``, containing the component's logic and template we will be showing in our browser.
 
