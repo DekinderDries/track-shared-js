@@ -39,3 +39,36 @@ Once this is done, your routes are active and working. Of course, routing to a S
 ## Creating the SetupDate component
 
 * Create a SetupDate component and paste the contents of setup-date.html in it.
+
+SetupDate is a special component. We want to link to it from within our PetInformation component, meaning we'll be using a _special_ way to pass down our selectedPet property to it.
+```
+<Link> can be used once you have added the react-router-dom library. It allows you to create links in your application (go figure...). These links can go to external content as well as internal. In this particular case, we want it
+to link to another component. On top of that, we want to pass down state. We want our selectedPet to be known by the component we go to next. So PetInformation needs to share the selectedPet property with SetupDate. We can achieve this as follows:
+
+  <Link to="/route-to-your-component" state={{ selectedPet: { propertyToPassDown } }}>
+    .......
+  </Link>
+```
+That's all there is to it. Once we've done this, the **Link** tag will bring us to the route where **SetupDate** is loaded (check your routes in **App.jsx** to see how we configured this). We do need to configure a few things in
+our SetupDate component to work with the property we pass on.
+```
+  const location = useLocation();
+  const { selectedPet } = location.state.selectedPet;
+```
+
+This is the part where the magic happens. We first define a  **location constant** which is populated with the response of our **useLocation** hook. This is a hook that's present in react-router-dom and it basically returns the
+object that represents the current URL. You can think about it like a useState that returns a new location whenever the URL changes. Once we have that, we can create a const **selectedPet* which we populate with our **selectedPet**.
+* Implement this and adjust all places in the HTML where we need to display certain selectedPet properties, make sure they all appear correctly.
+
+Our component is almost ready. We just need to provide functionality to the two buttons on it. The cancel button needs to redirect us to the profile gallery. The Let's Play button should also redirect us to the profile gallery, but it should
+increase the selectedPet's popularity property by 1.
+* Implement the functionalities for both buttons. Use <Link> to make the cancel button work, write a **onSubmitLetsPlay* function for the other button. 
+* Take a look at the backend to see how we can increment the popularity and implement it accordingly in our frontend app. If your play button isn't working as intended, take a look at how you implemented this. What functions are available for an event? How can we prevent certain default behaviour? Internet has lots of answers for this issue, it's very common when using forms in ReactJS.
+How will you guide your app back to its starting page after increasing the popularity? Look at the **useNavigate** hook (also a react-router-dom feature) and implement this as a promise in your function. More info about this hook can be found at [https://reactrouter.com/docs/en/v6/api#usenavigate](https://reactrouter.com/docs/en/v6/api#usenavigate).
+
+## Conclusion
+You've learned:
+- Passing state on when using a Link to navigate through the page.
+- The useLocation() hook and how to use it.
+- How to prevent default behaviour by a form, which can cause real headaches in ReactJS.
+- How to use the useNavigate() hook.
