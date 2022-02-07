@@ -8,7 +8,7 @@ build is stable and recommended for most users. Node includes npm (the node pack
 
 Once you have installed Node, you are good to go! Open up git bash, navigate to the correct folder where you want to install your app into and type ``npx create-react-app petinder``. This will create a React app with the necessary
 dependencies in a newly created folder called Petinder. Node will work its magic and boom... a wild React application will appear! Want to see what you got from this? Type 
-npm start in your app's folder. It will make the application fire up and after a few seconds you will be able to see it working at [http://localhost:3000] (http://localhost:3000)!
+npm start in your app's folder. It will make the application fire up and after a few seconds you will be able to see it working at [http://localhost:3000](http://localhost:3000)!
 
 ## Understanding our application
 It can be tempting to start right away, but this isn't always the best idea. Not just in React but in pretty much everything related to software development. Let's take a moment to think about what our app will look like. What it needs
@@ -23,7 +23,7 @@ Let's analyze what we see here. At the very least, we have a header, a footer an
 * Header and footer: This seems pretty straightforward. Not much logic or responsibilities going on, so we can treat the two of them as two separate components, no need to divide them further.
 * Content: This is a different case. There's a lot going on here. We need to show the pets we receive from our backend. On top of that, we need to provide several functionalities. Clients need to be able to search for a pet by its name. Clicking on a pet should
 show the pet's profile information. We also want to grant them the possibility to add or delete a pet and, if the chemistry is real, they should be able to schedule a date with the corresponding pet. That's a lot of responsibilities and logic for one component. 
-Heck, it's just too much for one component. Good thing React allows us to make components out of most of our requirements, allowing us to follow the single-responsibility principle and keeping our code as clean as possible.
+Heck, it's just too much for one component. Good thing React allows us to make components out of most of our requirements, allowing us to follow the single-responsibility principle and keeping our code as clean as possible. We'll go a little deeper into components in the next codelab.
 
 So in conclusion: We will be creating the following components: 
 * Header
@@ -39,17 +39,18 @@ In a project structure, it will look like this:
 
 The **src** directory is where we'll spend most of our time, as it's where the source code for our application lives. In it you see a subfolder called **components**, this is the place where we will store our.... *drumroll*.... components!
 
-The **public** directory contains files that will be read by your browser while you're developing the app; the most important of these is index.html. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the <title> element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
+The **public** directory contains files that will be read by your browser while you're developing the app; the most important of these is index.html. React injects your code into this file so that your browser can run it. You very much should change the text inside the <title> element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
 
-The public directory will also be published when you build and deploy a production version of your app. We won’t cover deployment in this tutorial, but you should be able to use a similar solution to that described in our Deploying our app tutorial.
+* Change your app's title to _Petinder_.
 
-The **package.json** file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read What is the file `package.json`? on NodeJS.org; we also talk about it in our Package management basics tutorial.
+The **package.json** file is the heart of any Node project. It records important metadata about a project which is required before publishing to NPM, and also defines functional attributes of a project that npm uses to install dependencies, run scripts, and identify the entry point to our package.
+Not all fields available in package.json will apply to you, but we can achieve some powerful benefits by recording information about our application in its package.json file. Understanding the role of package.json and how it relates to npm is an important part of developing Node.js apps, and increasingly an important part of the JavaScript ecosystem.
 
 This is our interpretation of a good setup for this app. Other people might have a different view on this and their view might be equally viable, React doesn't provide too many conventions and/or guidelines to follow. This makes it difficult to know if you're
 doing the right thing. You'll see that when you start looking up certain issues you run into. There's tons of information out there and everyone seems to have a different solution for the same problem. It's normal to feel a bit lost in this and it can get frustrating
 at times. A good rule of thumb is following what you already know about coding. Try to stick to one responsibility per component. Keep code as concise and clear as possible, with the idea that another developer should be able to find his way quick in the codebase always on your mind.
 
-You'll notice React uses often uses JSX (there are other types possible). Take a look at [https://reactjs.org/docs/introducing-jsx.html](https://reactjs.org/docs/introducing-jsx.html) to learn more about this syntax extension to JavaScript.
+You'll notice React often uses JSX (there are other types possible). Take a look at [https://reactjs.org/docs/introducing-jsx.html](https://reactjs.org/docs/introducing-jsx.html) to learn more about this syntax extension to JavaScript.
 
 ## Conclusion
 We now have a working React application. We got rid of the default contents and replaced it with the title of the app we're going to build. For now, we only have one component in
@@ -57,9 +58,11 @@ this app, which consists of ``App.jsx``, containing the component's logic and te
 
 You've learned:
 - how to create a new React app with ```create-react-app```.
+- What the default folders and files are for when you create a React app through **create-react-app*.
+- What **package.json** is and how it is not only used in React apps, but in the entire **Node** ecosystem.
 - how to start your angular app with ```npm start```.
 - what JSX is and why React recommends you to use it.
-- that a component contains both logic and its template within a single JSX file.
+- that a component contains both logic and its template within a single file.
 - to think about the structure of your app before diving into its code.
 
 

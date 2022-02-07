@@ -29,12 +29,14 @@ Adding routes to React is pretty straightforward. We will be adding ours in **Ap
 </div>
 ```
 
-This is the code you will see in your App.jsx file after adding the routing functionality. The first two Routes are custom routes you provide to any of your components (you can pass on properties or functions to these as well). Adjust
-them to show what they need to show. The first should show our ProfileGallery, the last the SetupDate component we are going to make.
+This is the code you will see in your App.jsx file after adding the routing functionality. The first two Routes are custom routes you provide to any of your components (you can pass on properties or functions here as well). Adjust
+them to show what they need to show. The first should show our ProfileGallery, the second the SetupDate component we are going to make.
 The last Route is a fallback that is used whenever someone tries to go to an address that doesn't exist. It can be used to show a custom 404 page.
 <Outlet /> is where the result of our routes will be shown. The component we show will be replacing <Outlet />.
 
-Once this is done, your routes are active and working. Of course, routing to a SetupDate component won't be working since we still need to create it. Let's do that!
+Once this is done, your routes are active and working.
+
+Of course, routing to a SetupDate component won't be working since we still need to create it. Let's do that!
 
 ## Creating the SetupDate component
 
@@ -56,13 +58,13 @@ our SetupDate component to work with the property we pass on.
   const { selectedPet } = location.state.selectedPet;
 ```
 
-This is the part where the magic happens. We first define a  **location constant** which is populated with the response of our **useLocation** hook. This is a hook that's present in react-router-dom and it basically returns the
-object that represents the current URL. You can think about it like a useState that returns a new location whenever the URL changes. Once we have that, we can create a const **selectedPet* which we populate with our **selectedPet**.
+This is the part where the magic happens. We first define a **location constant** which is populated with the response of our **useLocation** hook. This is a hook that's present in react-router-dom, and it basically returns the
+object that represents the current URL. You can think about it like a useState that returns a new location whenever the URL changes. Once we have that, we can create a const **selectedPet** which we populate with our **location.state.selectedPet**.
 * Implement this and adjust all places in the HTML where we need to display certain selectedPet properties, make sure they all appear correctly.
 
-Our component is almost ready. We just need to provide functionality to the two buttons on it. The cancel button needs to redirect us to the profile gallery. The Let's Play button should also redirect us to the profile gallery, but it should
-increase the selectedPet's popularity property by 1.
-* Implement the functionalities for both buttons. Use <Link> to make the cancel button work, write a **onSubmitLetsPlay* function for the other button. 
+Our component is almost ready. We just need to provide functionality to the two buttons in it. The cancel button needs to redirect us back to the profile gallery. The Let's Play button should also redirect us to the profile gallery, but it should
+increase the selectedPet's popularity property by 1 as well.
+* Implement the functionalities for both buttons. Use <Link> to make the cancel button work, write a **onSubmitLetsPlay** function for the other button. 
 * Take a look at the backend to see how we can increment the popularity and implement it accordingly in our frontend app. If your play button isn't working as intended, take a look at how you implemented this. What functions are available for an event? How can we prevent certain default behaviour? Internet has lots of answers for this issue, it's very common when using forms in ReactJS.
 How will you guide your app back to its starting page after increasing the popularity? Look at the **useNavigate** hook (also a react-router-dom feature) and implement this as a promise in your function. More info about this hook can be found at [https://reactrouter.com/docs/en/v6/api#usenavigate](https://reactrouter.com/docs/en/v6/api#usenavigate).
 
