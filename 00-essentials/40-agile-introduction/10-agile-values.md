@@ -15,7 +15,7 @@ For each of the cases:
 - You have around 2 minutes for each case.
 
 
-- **TIP!: If you encounter terminology which is new to you, I's always a good idea to right these down in a 'glossary document', to clarify with your team or with the trainers.**
+- **TIP!: If you encounter terminology which is new to you, I's always a good idea to write these down in a 'glossary document', to clarify with your team or with the trainers.**
     
 ## Cases
 - Bert is an analyst on a software project and needs to test some new features on an old application. 
