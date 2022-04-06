@@ -34,10 +34,10 @@ of stories: **Must-Have's** and **Nice-To-Have's**. Start with the Must-Have's, 
 
 - Create a new GitHub repository
 - Create a REST(ful) Web API (with JSON as the message / payload format)
-- Use Spring Boot (and Spring MVC, Spring Security,...)
+- Use Spring Boot
 - Use Maven as the Build & Dependency Management project tool.
     - Make it a multi-module project.
-- Perform logging (use spring-boot-starter's logging dependencies: logback and slf4j)
+- Perform logging
     - Certainly log all interactions with the application that can be defined as "errors"
         - E.g.: unauthorized access, illegal arguments, exceptions in general,...
 - Provide, through OpenAPI and Swagger(UI) an online manual / documentation for your Web API.
@@ -46,7 +46,7 @@ of stories: **Must-Have's** and **Nice-To-Have's**. Start with the Must-Have's, 
         - Make it a separate technical story.
     - Correctly setup and handle the transactions.
     - Write your DDL (create tables,...) in a separate `.sql` file, which you also put under version control.
-- Use Travis or Jenkins to set up a Continuous Integration (CI) pipeline.
+- Use Jenkins to set up a Continuous Integration (CI) pipeline.
     - Additionally, but optional, deploy to Heroku!
 - Think about Security: authentication and authorization. It is not a priority, but if you have the time, implement it properly.
     - Until then, you can neglect the fact that certain endpoints should only be usable by - for example - an administrator.
