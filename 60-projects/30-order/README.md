@@ -36,7 +36,6 @@ of stories: **Must-Have's** and **Nice-To-Have's**. Start with the Must-Have's, 
 - Create a REST(ful) Web API (with JSON as the message / payload format)
 - Use Spring Boot
 - Use Maven as the Build & Dependency Management project tool.
-    - Make it a multi-module project.
 - Perform logging
     - Certainly log all interactions with the application that can be defined as "errors"
         - E.g.: unauthorized access, illegal arguments, exceptions in general,...
