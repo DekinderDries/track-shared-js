@@ -32,29 +32,38 @@ Yes! React offers you two kinds of components. They can do exactly the same, the
 The exact same example, written as a functional component, will look like this:
 
     function Car() {
-        return <h2>Hi, I am a Car!</h2>;
+        return (<h2>Hi, I am a Car!</h2>);
     }
 
 In this simplified example, there isn't that big of a difference between the two. However, in everyday work, functional components can be written using less code, which makes them easier to use and understand. Class components have a different way of handling state compared to functional components. State is probably one of the most important aspects of ReactJS, since
 it is what we will use to determine our app's behaviour (a component will rerender when its state changes, you'll see the importance of this while going through these codelabs). In the current version of React, certain functionalities are also dependent on the use of functional components.
 Because of this, we won't be using class components in our codelabs. Functional components are the way to go in modern React applications!
 
-Enough talking, let's get that header component on our screen! In **Header.jsx**, we will be showing our title inside of the header. To do this, we will use CSS (don't worry, we already made it and you can just copy/paste) and a tiny bit of code for this. First of all, type ```function Header() {}```. In between the curly braces, we will
+Enough talking, let's get that header component on our screen! In **Header.jsx**, we will be showing our title inside the header. To do this, we will use CSS (don't worry, we already made it and you can just copy/paste) and a tiny bit of code for this. First of all, type ```function Header() {}```. In between the curly braces, we will
 add our code. We want to define our title as a constant and call that constant from within our HTML.
 * Make a new functional component **Header.jsx**.
+  * Make a file **Header.jsx** in your components folder
+  * Add a function named Header in your newly created file. Like so: `function Header(){}` 
 * You will need to import the React library for your component to work. Add ```import { React } from 'react';``` at the top of your file.
-* Define a constant **title** and give it a String value *Petinder*.
-* Copy the HTML code you find in the header.html file in this codelab's folder. Nothing very special going on there, except the way we are showing our constant variable title on the screen. To do this in React, we wrap that variable in curly braces -> **{title}**.
-* One small detail that you might have noticed. In our HTML, we don't use **class** as CSS tag, we use **className**. This is because class is already a reserved keyword in JSX files, hence there is a different notation for our CSS classes: className. Other than that, there is no difference.
+* Define a constant **title** in your **Header()** function and give it a String value *Petinder*.
+* Copy the HTML code you find in the **header.html** file into your component.
+  * The html code for your code goes into a `return (<html_code_goes_here>)` statement in your function. 
+  * The html code itself nothing very special, except the way we are showing our constant variable title on the screen. To do this in React, we wrap that variable in curly braces -> **{title}**.
 * One very important step still needs to be taken before our component is ready to be used in our app. We need to make sure it is accessible to other components and to do so, we have to **export** it. At the end of your file (outside your function), add ```export default Header;```. This will export your component, making it visible to other components
   who want to use it.
+* One last small detail that you might have noticed. In our HTML, we don't use **class** as CSS tag, we use **className**. This is because class is already a reserved keyword in JSX files, hence there is a different notation for our CSS classes: className. Other than that, there is no difference.
 
 ## Making our Footer
 
 Good job on that header, let's do the same for out footer! You can repeat the same steps, only the look and logic in the footer will of course be slightly different. When your component is set up, copy and paste the code you find in footer.html. You'll notice there is something missing here.
 We want to show the current year in our footer, but we don't want to update it manually whenever a new year hits.
-* Set up the **Footer.jsx** component and copy the content from **footer.html** into this new component. Use **Header.jsx** as an inspiration for this.
-* JavaScript has a Date() functionality, just like Java does. Try to implement it so that it shows you the current year.
+* Set up the **Footer.jsx** component.
+  * Create the file
+  * Set up a component like you did with **Header.jsx**
+  * Copy the content from **footer.html** into this new component. Use **Header.jsx** on how to do this.
+* Make sure the year is displayed correctly.
+  * Everything between `{}` in your html code will be evaluated as JavaScript. Add the necessary JavaScript code to display the year.
+    * Hint: JavaScript has a Date() functionality, just like Java does.
 * You might notice something weird in the HTML file. ```{' '}``` is a JSX annotation to show a space, in this case between our current year and Switchfully.
 
 ## Showing our components
@@ -63,10 +72,22 @@ When you save your components and check your application at [http://localhost:30
 
 Copy/paste the code from **app.html** into **App.jsx**. You'll see a lot of code in **App.jsx** already, you can safely delete it all and put the code in the return method of a functional component called **App**.
 * Delete the contents in **App.jsx**. Make this component a functional component that returns the HTML you copied from **app.html**.
-* Add our Header and Footer component in the right place. Inserting a component is nothing more than simply typing ```<NameOfYourComponent />```. In our app, this means Header should be right below the opening of our wrapping ```<div>``` and Footer goes right above the closing of our wrapping ```<div>```.
+* Add our Header and Footer component in the right place. Inserting a component is nothing more than simply typing ```<NameOfYourComponent />```. 
+  * In our app, this means Header should be right below the opening of our wrapping ```<div>``` 
+  * The Footer goes right above the closing of our wrapping ```<div>```.
 * If you want an example of how a component can be called, take a look at **index.jsx**. Our application starts there with the calling of our **App** component.
 
-Save all your files and take a look at your app in your browser. Not what you expected? There's one final step we forgot, adding the CSS! Copy the contents in **styles.css** and add them to **index.css** in your app. Copy heart.png and add it to **public/assets/images**. Don't forget to import it in your **Header.jsx** component. Save, take a second look and everything should be okay now!
+Save all your files and take a look at your app in your browser. Not what you expected? There's are a few more final step we forgot:
+
+* Adding the CSS
+  * Copy the contents in **styles.css** and add them to **index.css** in your app. 
+* Displaying an image
+  * To display an image you first need to save this image in your **src/** folder and then reference it from your component.
+  * Add the directories **assets/images/** to your **src** folder.
+  * Copy **heart.png** to your images folder
+  * Reference the image from your component by adding `import pic from '..assets/images/heart.png'` to your header component
+
+This should solve the final issues. Enjoy your header and footer! 
 
 ## Conclusion
 
