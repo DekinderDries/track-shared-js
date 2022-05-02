@@ -24,7 +24,7 @@ available on call
 ## Story 3
 > As an Airport carrier
 I need to have Security (Police)
-So I can take care of Scurity
+So I can take care of Security
 
 As proven by:
 ```
@@ -34,7 +34,7 @@ available on call
 ## Story 4
 > As an Airport carrier
 I need to have a runway
-So that aircrafts can
+So that aircraft can
 start and land
 
 As proven by:
@@ -144,7 +144,7 @@ an overview to the Airport
 ## Story 13
 > As an Airport carrier
 I need to have an Aircraft-Tractor
-So that aircrafts can be pushed
+So that aircraft can be pushed
 reverse
 
 As proven by:
@@ -157,9 +157,8 @@ which can link up to aircrafts
 > As an Airport carrier
 I need to have a Airport Cargo
 Loader
-So that aircrafts can be charged
-with food, newspapers and duty
-free articles
+So that aircraft can be charged
+with food, newspapers and duty-free articles
 
 As proven by:
 ```
@@ -171,7 +170,7 @@ on call with an upper deck
 ## Story 15
 > As an Airport carrier
 I need to have a ‚Follow me‘ car
-So that aircrafts can be controled
+So that aircraft can be controlled
 to the parking lot
 
 As proven by:
