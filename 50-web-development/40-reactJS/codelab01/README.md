@@ -37,9 +37,9 @@ In a project structure, it will look like this:
 
 <img src="structure.png" width="244" height="598" />
 
-The **src** directory is where we'll spend most of our time, as it's where the source code for our application lives. In it you see a subfolder called **components**, this is the place where we will store our.... *drumroll*.... components!
+The **src** directory is where we'll spend most of our time, as it's where the source code for our application lives. In it, you see a subfolder called **components**, this is the place where we will store our.... *drumroll*.... components!
 
-The **public** directory contains files that will be read by your browser while you're developing the app; the most important of these is index.html. React injects your code into this file so that your browser can run it. You very much should change the text inside the <title> element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
+The **public** directory contains files that will be read by your browser while you're developing the app; the most important of these is **index.html**. React injects your code into this file so that your browser can run it. You very much should change the text inside the <title> element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
 
 * Change your app's title to _Petinder_.
 
