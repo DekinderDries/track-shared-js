@@ -88,8 +88,14 @@ const [pets, setPets] = useState([]);
 **pets** is the variable our list will be stored in. **setPets** is a function we can call to replace that pets variable with new content. We add the empty array to our useState() function to declare what the starting value of pets has to be (pets gets initialized when the component is created).
 
 
-To fill up pets with the result of the corresponding call to our backend, we will use a second hook, called **useEffect()**. We use this hook when we want to do something after rendering our component. React will remember the function you passed (this is our "effect") and call it later after performing DOM updates (aka loading the component). This feature comes in handy for our requirement, as it allows us to pass on a property at the end. This property will be the property that 
-is being watched by our useEffect() hook. When that property changes, our hook will be re-executed. In our application, we will make the hook monitor a certain state. We can alter that state when we, for example, add a pet. Altering the state will trigger a rerender of our component, which in its turn will re-execute our "effect". Our list of pets will be refreshed!
+To fill up pets with the result of the corresponding call to our backend, we will use a second hook, called **useEffect()**. 
+We use this hook when we want to do something after rendering our component. 
+React will remember the function you passed (this is our "effect") and call it later after performing DOM updates (aka loading the component). 
+This feature comes in handy for our requirement, as it allows us to pass on a property at the end. 
+This property will be the property that is being watched by our useEffect() hook. 
+When that property changes, our hook will be re-executed. 
+In our application, we will make the hook monitor a certain state. We can alter that state when we, for example, add a pet. Altering the state will trigger a rerender of our component, which in its turn will re-execute our "effect". 
+Our list of pets will be refreshed!
 * Implement this useEffect() hook as follows:
 
 ```

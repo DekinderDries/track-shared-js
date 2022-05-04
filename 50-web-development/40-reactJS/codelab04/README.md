@@ -25,14 +25,16 @@ onChange={(event) => what-needs-to-happen}
 Only one thing needs to change here, we want to provide a function that gets executed everytime a user types a letter in our input field. We don't have to change **(event)**, since that is just a placeholder name for our event. It could be literally anything, as long as we refer to it in our implementation. Conventions here
 is the use of either **event** or **e** as a name.
 
-Take a look at the value attribute in our input tag. It is set to **{filterText}**. This could provide a little bit of clarity (don't worry if it doesn't though). We are going set the value of a variable called **filterText** to the current value of our input field. Every time someone types a letter in this field, this variable is being
+Take a look at the value attribute in our input tag. It is set to **{filterText}**. This could provide a bit of clarity (don't worry if it does not though). 
+We are going set the value of a variable called **filterText** to the current value of our input field. Every time someone types a letter in this field, this variable is being
 updated with that new letter. When I type _a_, filterText should get value _a_. If I type _b_ after that (seeing _ab_ in the search field), filterText becomes _ab_. This filterText variable can be used to filter our list of pets according to its value.
 
 In a way, we will be setting our filterText variable to the value of our search field. What technique did we learn about in the previous codelab that could easily allow us to do this?
 * Provide a filterText variable and a way to set it to a new value.
 * Adjust the onChange method in our **input** tag so that filterText is updated with its value. We want to record every change to its value, we can track this kind of change with **event.target.value**.
 
-All that's left is to provide a filtered list of pets, filtered by the value of filterText. If nothing has been typed in the search field, filterText will be an empty String and we show every pet in our list. Once filterText changes, we want to show the pets in our list that correspond to this change.
+All that's left is to provide a filtered list of pets, filtered by the value of filterText. If nothing has been typed in the search field, filterText will be an empty String, and we show every pet in our list. 
+Once filterText changes, we want to show the pets in our list that correspond to this change.
 * Make a new variable **filteredPets**, give it our list of pets as a value and find a way to filter it so the list only shows the names that include the letters that are present in filteredText.
 * If your searchbar isn't working, take a good look at what you are doing when showing your pets on screen. _Which_ list are you showing?
 * Be wary of potential edge-cases that could mess with your result.

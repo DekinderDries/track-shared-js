@@ -29,7 +29,7 @@ Let's start with making sure our form does what we expect it to do.
 * This won't allow us to record what we type just yet. We need our code to update the value of the state every time we update the value in the form. For this, we will add an **onChange()** function that sets our state to the value of the input (remember our search input field?).
 * Extend your input tags with **onChange={(e) => setFormValue({...formValue, name: e.target.value})}**. This goes for the name field. Do the same for the other fields, adjusted for their value. Do mind that your syntax will look different if you wrote separate useState() implementations.
 * Add a **handleSubmit()** function that takes our values and uses them in a new Pet object. Pass that Pet object on when you call the **addPet()** function we wrote in our **PetService**. Make sure this function gets executed when we press the submit button.  
-* Add the component to our ProfileGallery. We can show another component by using the following code: **<AddPet />**. You can add this right below the search functionality.
+* Add the component to our ProfileGallery. We can show another component by using the following code: `<AddPet><AddPet/>`. You can add this right below the search functionality.
 Try this out. Is it working? Even if you're not seeing anything change on your screen, keep an eye on your backend to see if the pet got created. If it was, refresh your browser, and you should see it appear.
 
 ## Using state to update our profile gallery
@@ -41,7 +41,7 @@ from within a child component. In short, we will have to create a function in th
 
 * Create a new state in the ProfileGallery. Call it componentState and initialize it as { state: 'Updated' }.
 * Create a function called **updateState()**, where you set componentState to a value you passed on. 
-* We need to pass this function to our child component, AddPet. Passing a property or function is done the following way: **<AddPet triggerParentUpdate = {updateState} />**. triggerParentUpdate is the name you will use in the child component, it can be literally anything you want.
+* We need to pass this function to our child component, AddPet. Passing a property or function is done the following way: `<AddPet triggerParentUpdate = {updateState} />`. triggerParentUpdate is the name you will use in the child component, it can be literally anything you want.
 * In AddPet, we will have to specify which property or function we are receiving from our parent component. We can do this by adding **{triggerParentUpdate}** inside the parentheses in our AddPet function.
 * All that's left is making sure our state gets updated when we add a pet. We want the triggerParentUpdate function to fire when addPet() has been executed. This sounds like a fit for something we saw before, promises!
 * Add a promise to the part of the code where we execute **addPet()**, making sure **triggerParentUpdate()** fires after the call was made succesfully. Don't forget to pass a new value for the state with the update function. (Hint: promises can be chained)
