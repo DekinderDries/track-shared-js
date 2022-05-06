@@ -55,8 +55,6 @@ sayHiWithCallback('Bob', 'Dylan', printMessage);
 //**********************************************************
 
 class Person {
-    let firstName;
-    let lastName;
 
     constructor(fName, lName){
         this.firstName = fName;
