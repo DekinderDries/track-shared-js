@@ -2,7 +2,7 @@
  * More examples / documentation on https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
  */
 
-function resolveAfter4Seconds() {
+async function resolveAfter4Seconds() {
     console.log("--> starting slow promise");
     return new Promise(resolve => {
         setTimeout(function() {
@@ -10,9 +10,9 @@ function resolveAfter4Seconds() {
             console.log("<-- slow promise is done");
         }, 4000);
     });
-};
+}
 
-function resolveAfter1Second() {
+async function resolveAfter1Second() {
     console.log("--> starting fast promise");
     return new Promise(resolve => {
         setTimeout(function() {
@@ -20,7 +20,7 @@ function resolveAfter1Second() {
             console.log("<-- fast promise is done");
         }, 1000);
     });
-};
+}
 
 async function start() {
     console.log('Start!');
