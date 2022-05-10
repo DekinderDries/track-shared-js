@@ -60,7 +60,7 @@ You've learned:
 - how to create a new React app with ```create-react-app```.
 - What the default folders and files are for when you create a React app through **create-react-app*.
 - What **package.json** is and how it is not only used in React apps, but in the entire **Node** ecosystem.
-- how to start your angular app with ```npm start```.
+- how to start your react app with ```npm start```.
 - what JSX is and why React recommends you to use it.
 - that a component contains both logic and its template within a single file.
 - to think about the structure of your app before diving into its code.
