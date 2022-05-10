@@ -1,7 +1,7 @@
 # Codelab03 - Showing our pets on the screen
 
 With our basic layout structured and working, it's time to finally show some content. In real Tinder, it's all about the pics, so let's get our pets on the screen! For this, we have a basic Java backend running which is connected to a Postgres database, all in Heroku. 
-This codelab will teach us how to fetch this data from within our Angular app and show it to the world! Even though our backend app is available through Heroku, we will check it out locally and spin it up ourselves.
+This codelab will teach us how to fetch this data from within our React app and show it to the world! Even though our backend app is available through Heroku, we will check it out locally and spin it up ourselves.
 This way, we can check and/or change backend code if needed (spoiler: you won't have to change a lot). It helps you to understand what is needed to enable our back- and frontend to talk to each other. You can find it at [https://github.com/switchfully/angular-pet-tinder-backend](https://github.com/switchfully/angular-pet-tinder-backend). Download it and spin it up!
 
 ## Defining a pet
