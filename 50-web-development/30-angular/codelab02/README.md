@@ -88,7 +88,8 @@ it for yourself. Just a few hints to get you going:
    
 ### Using the selector of a component
 - After finishing this, make sure you are showing the right module and its components. Unless you changed it, you'll probably still seeing the original implemantation. The problem lies in the ``app.component.html`` file. This file doesn't show our layout module yet. You can change this by deleting the contents and writing
-``<app-layout></app-layout>``. By doing this, you will instruct this html file to show the contents it can find under the component that is defined by the name ``app-layout``. Still not working? Make sure the ``LayoutComponent`` is being exported, otherwise our ``app.module`` can't find it.
+``<app-layout></app-layout>``. By doing this, you will instruct this html file to show the contents it can find under the component that is defined by the name ``app-layout``. 
+- Still not working? Make sure the ``LayoutComponent`` is being exported and that the ``app.module`` imports the ``LayoutModule``, otherwise our ``app.module`` can't find it.
   
 > Some more info on this: app-layout is the name of our layout component. You can find it in **layout.component.ts**.
 > @Component({<br>

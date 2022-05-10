@@ -1,18 +1,18 @@
 export class Person {
 
-    constructor(private firstName: string, private lastName: string, private hobby = 'cycling') {
+    public constructor(private firstName: string, private lastName?: string, private hobby = 'cycling') {
 
     }
 
-    getFullName(): string {
+    private getFullName(): string {
         return this.firstName + ' ' + this.lastName;
     }
 
-    printName(): void {
+    public printName(): void {
         console.log(this.getFullName());
     }
 }
 
-let bob = new Person('bob', 'dylan', 'singing');
-let billie = new Person('billie', 'eilish');
+let bob: Person = new Person('bob', 'singing');
+let billie: Person = new Person('billie', 'eilish');
 
