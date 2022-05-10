@@ -85,7 +85,7 @@ Save all your files and take a look at your app in your browser. Not what you ex
   * To display an image you first need to save this image in your **src/** folder and then reference it from your component.
   * Add the directories **assets/images/** to your **src** folder.
   * Copy **heart.png** to your images folder
-  * Reference the image from your component by adding `import pic from '..assets/images/heart.png'` to your header component
+  * Reference the image from your component by adding `import pic from '../assets/images/heart.png'` to your header component
 
 This should solve the final issues. Enjoy your header and footer! 
 
