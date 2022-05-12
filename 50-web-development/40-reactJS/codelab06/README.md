@@ -25,7 +25,7 @@ We move on towards the PetInformation component:
         );
 }
 ```
-Remember that your html always needs to be in a tag. Add  `<></>` when needed.
+_Remember that the html of a component always needs to be in **one** tag. Encircle your html with `<></>` when needed._
 
 In this piece of code, we are checking if our propertyToCheck is true or false. If true, we'll show what comes after &&. If false, we're not showing anything.
 
