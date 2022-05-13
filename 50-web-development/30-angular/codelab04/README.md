@@ -68,6 +68,12 @@ Start by adding the following code to your ``profile.gallery.component.html`` fi
 
 - You should be able to adjust the code so it displays the correct fields for our selectedPet. The conditional showing of this block isn't too hard either. Take a look at https://angular.io/api/common/NgIf and implement this. We only want
   to show the block with name and profileText when we click the corresponding Pet. (in other words, when there is a ``selectedPet``).
+
+### Conditional styling
+To highlight a pet we need to add the CSS class `active` to the selected pet `<div>`. Angular allows you to add styling that depends on a certain condition. 
+With`[class.<class-name>]="<condition>"` the class called `<class-name>` will be added when `<condition>` holds.
+Add `[class.active]` to your pet `<div>`. Which condition do you need to add?
+If you're finished, enjoy your new stylish pet overview. Like a CSS pro!
   
 ## Filtering
 Time for our final sorting step! We've sorted our pets alphabetically. We made them clickable and are showing their name and information when we do. Right now, this seems enough but what will happen if our app goes viral and there are millions
