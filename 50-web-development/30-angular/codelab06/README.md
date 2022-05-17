@@ -44,7 +44,7 @@ Our first focus will be to show this component on our screen when we click the `
         <a type="button"
             class="btn btn-primary btn-lg dialog-centered">
             Setup date
-        /a>
+        </a>
     </div>
     ```
     This adds the button to our app, but of course this doesn't work yet. To fix this, we'll use ``routerLink``. Take a look at https://angular.io/api/router/RouterLink and see if you can get it working. Make sure 
