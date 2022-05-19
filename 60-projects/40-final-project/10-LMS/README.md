@@ -76,7 +76,7 @@
 
 #### Screen
 
-![Profile](images/edit-profile.png)
+![Edit-Profile](images/edit-profile.png)
 
 | Given                                   | When                                                                        | Then                                                                                                      |
 |-----------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
@@ -89,6 +89,9 @@
 ### COA-1
 
 **As a coach I can log into my account**
+
+#### Screen
+![Login](images/login.png)
 
 ### CLA-1
 
@@ -150,9 +153,33 @@
 
 **As a student I can get an overview of all codelabs in a course**
 
+    As a student I want to see a list of codelabs when selecting a course.
+
+#### Screen
+![Codelabs-overview](images/codelabs-overview.png)
+
+| Given | When                         | Then                                 |
+|-------|------------------------------|--------------------------------------|
+|       | I click on the overview link | I see an overview of all the courses |
+
+
 ### PRO-1
 
 **As a student I can mark my progress of a codelab**
+    
+    When visiting the codelabs overview page, you can select your progression for each codelab.
+    This progression will be saved if you press the 'save' button.
+    The options you can choose from are: Not started, Busy, Feedback needed, Stuck, Testing, Refactoring, Done
+
+#### Screen
+![Codelabs-overview](images/codelabs-overview.png)
+
+
+| Given                                                                    | When                                                   | Then                                                                         |
+|--------------------------------------------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------|
+| I am in the codelabs overview page<br/>All codelabs are in 'Not Started' | I select 'Done' for the first codelab and press 'save' | I refresh the codelab overview page. I see that the first codelab is in done |
+| Scenario#1 + I log in as a different student with no progression         | I navigate to the codelab overview page                | All codelabs are still in 'Not Started'                                      |
+
 
 ### PRO-2
 
@@ -165,6 +192,20 @@
 ### PRO-4
 
 **As a student a module is marked as done if I have marked all sub-modules of that module as done**
+
+### PRO-5
+**As a coach I can get an overview of the progress of all the students**
+
+    When visiting the progress overview page as a coach. I see an overview of all students.
+    Under each student name there will be a progress bar showing the progression of that student.
+
+#### Screen
+
+| Given                                                                         | When                                | Then                                               |
+|-------------------------------------------------------------------------------|-------------------------------------|----------------------------------------------------|
+| A student that did finished 0 of the 6 codelabs<br/>I am logged in as a coach | Visiting the progress overview page | I see an empty progress bar under the student      |
+| A student that did finished 3 of the 6 codelabs<br/>I am logged in as a coach | Visiting the progress overview page | I see an half empty progress bar under the student |
+| 6 students exist in the application<br/>I am logged in as a coach             | Visiting the progress overview page | I see the progress of 6 students                   |
 
 ### CDD-1
 
