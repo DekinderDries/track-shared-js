@@ -17,8 +17,16 @@
     To create an account the visitor can go the register page using the navigation menu.
     After filling in the form the visitor is registered in the system.
 
-
+#### Screen
 ![Register](images/register.png)
+
+#### Acceptance criteria
+
+| Given                                                                           | When                         | Then                                                         |
+|---------------------------------------------------------------------------------|------------------------------|--------------------------------------------------------------|
+| As a visitor, I have filled in my username, email, password and repeat password | Clicking the register button | I am registered in the system                                |
+| As a visitor I forget to fill in a field                                        | Clicking the register button | I get a message the the field is required                    |
+| As a visitor I register with an already registered email address                | Clicking the register button | I get a message that the email address is already registered |
 
 ### ACC-2
 **As a student I can log into my student account**
