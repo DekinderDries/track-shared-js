@@ -16,7 +16,7 @@
 **As a visitor I can register an account**
 
     When a student wants to use our LMS, he/she first needs to create an account.
-    To create an account the visitor can go the register page using the navigation menu.
+    To create an account the visitor can go the register page using the navigation bar.
     After filling in the form the visitor is registered in the system.
 
 #### Screen
@@ -25,11 +25,12 @@
 
 #### Acceptance criteria
 
-| Given                                                                           | When                         | Then                                                         |
-|---------------------------------------------------------------------------------|------------------------------|--------------------------------------------------------------|
-| As a visitor, I have filled in my username, email, password and repeat password | Clicking the register button | I can log into my account                                    |
-| As a visitor I forget to fill in a field                                        | Clicking the register button | I get a message the the field is required                    |
-| As a visitor I register with an already registered email address                | Clicking the register button | I get a message that the email address is already registered |
+| Given                                                                                | When                         | Then                                                         |
+|--------------------------------------------------------------------------------------|------------------------------|--------------------------------------------------------------|
+| As a visitor, I have filled in my: display name, email, password and repeat password | Clicking the register button | I can log into my account                                    |
+| As a visitor I forget to fill in a field                                             | Clicking the register button | I get a message the the field is required                    |
+| As a visitor I register with an already registered email address                     | Clicking the register button | I get a message that the email address is already registered |
+| As a visitor I fill in two different passwords                                       | Clicking the register button | I get a message that the password do not match               |
 
 ### ACC-2
 
@@ -38,7 +39,7 @@
     When a student wants to login, he/she first need to navigate to the login page.
     On the login page the visitor can enter his/her credentials.
     When pressing the login button, if the credentials are correct, the student is logged in.
-    The student will then be navigated to their profile page and their name will apear in the menu bar as: 'logged in as student <student_name>'
+    The student will then be navigated to their profile page and their name will appear in the navigation bar as: 'logged in as student <student_name>'
 
 #### Screen
 
@@ -54,9 +55,36 @@
 
 **As a student I can view my profile**
 
+    Every student has a profile page. In here a student can view his/her profile.
+    In the profile page you can view your: username and display name.
+
+#### Screen
+
+![Profile](images/profile.png)
+
+| Given                             | When                                                      | Then                                                                                |
+|-----------------------------------|-----------------------------------------------------------|-------------------------------------------------------------------------------------|
+| A student logs into their account | Login successful                                          | The student is navigated to their profile page, viewing their name and display name |
+| A student is logged in            | Navigating to their profile page using the navigation bar | The student is navigated to their profile page, viewing their name and display name |
+
 ### ACC-4
 
 **As a student I can edit my profile**
+
+    Every student has a profile page. In here a student can change his/her profile.
+    In the edit profile page you can change your: username, display name and password.
+
+#### Screen
+
+![Profile](images/edit-profile.png)
+
+| Given                                   | When                                                                        | Then                                                                                                      |
+|-----------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| A student is on their profile page      | When clicking the 'edit' button                                             | The student is navigated to the edit profile page                                                         |
+| A student is on their edit profile page | Changing either their display name, email or password and pressing 'save'   | The respective properties will have changed<br/>The student will be navigated back to their profile page. |
+| A student is on their edit profile page | Changing either their display name, email or password and pressing 'cancel' | Nothing will have changed<br/>The student will be navigated back to their profile page.                   |
+| A student is on their edit profile page | Changing their email to an already existing email and pressing 'save'       | The student will get a warning message: 'email already exists'                                            |
+| A student is on their edit profile page | Changing their password but passwords do not match                          | The student will get a warning message: 'passwords do not match'                                          |
 
 ### COA-1
 
