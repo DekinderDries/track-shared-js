@@ -202,11 +202,11 @@
 
 #### Screen
 
-| Given                                                                         | When                                | Then                                               |
-|-------------------------------------------------------------------------------|-------------------------------------|----------------------------------------------------|
-| A student that did finished 0 of the 6 codelabs<br/>I am logged in as a coach | Visiting the progress overview page | I see an empty progress bar under the student      |
-| A student that did finished 3 of the 6 codelabs<br/>I am logged in as a coach | Visiting the progress overview page | I see an half empty progress bar under the student |
-| 6 students exist in the application<br/>I am logged in as a coach             | Visiting the progress overview page | I see the progress of 6 students                   |
+| Given                                                                         | When                                | Then                                              |
+|-------------------------------------------------------------------------------|-------------------------------------|---------------------------------------------------|
+| A student that did finished 0 of the 6 codelabs<br/>I am logged in as a coach | Visiting the progress overview page | I see an empty progress bar under the student     |
+| A student that did finished 3 of the 6 codelabs<br/>I am logged in as a coach | Visiting the progress overview page | I see an half full progress bar under the student |
+| 6 students exist in the application<br/>I am logged in as a coach             | Visiting the progress overview page | I see the progress of 6 students                  |
 
 ### CDD-1
 
