@@ -31,6 +31,7 @@
 | As a visitor I forget to fill in a field                                             | Clicking the register button | I get a message the the field is required                    |
 | As a visitor I register with an already registered email address                     | Clicking the register button | I get a message that the email address is already registered |
 | As a visitor I fill in two different passwords                                       | Clicking the register button | I get a message that the password do not match               |
+| As a visitor I fill an e-mail that is in the wrong format                            | Clicking the register button | I get a message that the e-mail is not correctly formatted   |
 
 ### ACC-2
 
