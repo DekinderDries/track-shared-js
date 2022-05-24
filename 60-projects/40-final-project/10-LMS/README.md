@@ -201,6 +201,7 @@
     Under each student name there will be a progress bar showing the progression of that student.
 
 #### Screen
+![Progression-overview](images/progression-overview.png)
 
 | Given                                                                                                       | When                                | Then                                              |
 |-------------------------------------------------------------------------------------------------------------|-------------------------------------|---------------------------------------------------|
