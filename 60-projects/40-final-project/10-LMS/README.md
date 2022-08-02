@@ -95,6 +95,7 @@
 ![Login](images/login.png)
 
 ### CLA-1
+    Every coach can create a class. This class will be tied to that specific coach.
 
 **As a coach I can create a class**
 
@@ -102,45 +103,66 @@
 
 **As a student I can choose my class in my profile**
 
+    Every student is a member of a class. The student can go to his/her profile and update it to match his/her corresponding class.
+
 ### CLA-3
 
 **As a student/coach I can view the class overview screen**
+
+    Every class has an overview screen. Both students and coaches can see the overview screen of their corresponding class.
 
 ### MOD-1
 
 **As a coach I can create a module**
 
+    Every coach can create a module. A module is a collection of codelabs that are tied to a specific subject of the course.
+
 ### MOD-2
 
 **As a coach I can edit the name of a module**
+
+    Every coach can edit existing modules names.
 
 ### MOD-3
 
 **As a student I can get an overview of all modules**
 
+    Every student can see an overview of all available modules.
+
 ### SUB-1
 
 **As a coach I can create a sub-module**
+
+    Every coach can create sub-modules. A sub-module is a specific part of an upper-lying module. For example: Java Fundamentals is a module, Object-Oriented       Programming is a sub-module of said Java Fundamentals module.
 
 ### SUB-2
 
 **As a coach I can edit the name of a sub-module**
 
+    Every coach can edit a sub-module's name.
 ### SUB-3
 
 **As a student I can get an overview of all sub-modules**
+
+    Every student can request an overview of all sub-modules.
 
 ### COU-1
 
 **As a coach I can create a course**
 
+    Every coach can create a course. A course contains various codelabs
+
 ### COU-2
 
 **As a coach I can edit the name of a course**
 
+    Every coach can edit the name of a course.
+
 ### COU-3
 
 **As a student I get an overview of all courses in a modules**
+
+    Every student can request an overview of all courses available in a module.
 
 ### COD-1
 
