@@ -95,9 +95,15 @@
 ![Login](images/login.png)
 
 ### CLA-1
-    Every coach can create a class. This class will be tied to that specific coach.
 
 **As a coach I can create a class**
+
+    Every coach can create a class. This class will be tied to that specific coach.
+    
+| Given                                   | When                                                                        | Then                                                                                                      |
+|-----------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| A coach is viewing his profile page     | When clicking the 'create class' button                                     | The coach is taken to the create class page                                                      |
+                                      |
 
 ### CLA-2
 
