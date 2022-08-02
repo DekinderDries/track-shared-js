@@ -2,7 +2,7 @@
 
 ## Stories
 
-### HOM-1
+### HOM-1 - Done
 
 **As a visitor I will see the home page when visiting the LMS application**
 
@@ -11,7 +11,7 @@
 
 ![Home](images/home.png)
 
-### ACC-1
+### ACC-1 - Done
 
 **As a visitor I can register an account**
 
@@ -33,7 +33,7 @@
 | As a visitor I fill in two different passwords                                       | Clicking the register button | I get a message that the password do not match               |
 | As a visitor I fill an e-mail that is in the wrong format                            | Clicking the register button | I get a message that the e-mail is not correctly formatted   |
 
-### ACC-2
+### ACC-2 - Done
 
 **As a student I can log into my student account**
 
@@ -52,7 +52,7 @@
 | A student with a non-existing account | Going to the login page<br/>Filling in their credentials<br/>Pressing the login button | A warning message will appear: 'Invalid credentials'                                                                   |
 | A student with a existing account     | Going to the login page<br/>Filling in the wrong password                              | A warning message will appear: 'Invalid credentials'                                                                   |
 
-### ACC-3
+### ACC-3 - Done
 
 **As a student I can view my profile**
 
@@ -87,7 +87,7 @@
 | A student is on their edit profile page | Changing their email to an already existing email and pressing 'save'       | The student will get a warning message: 'email already exists'                                            |
 | A student is on their edit profile page | Changing their password but passwords do not match                          | The student will get a warning message: 'passwords do not match'                                          |
 
-### COA-1
+### COA-1 - Done
 
 **As a coach I can log into my account**
 
@@ -214,7 +214,7 @@
 | A coach is on the codelab page  | When clicking the "edit codelab" button                                              | The coach is taken to the edit codelab page 
 | A coach is on the edit codelab page| When entering the codelab details (name, connections)                             | The codelab is saved
 
-### COD-3
+### COD-3 - Done
 
 **As a student I can get an overview of all codelabs in a course**
 
@@ -228,7 +228,7 @@
 |       | I click on the overview link | I see an overview of all the courses |
 
 
-### PRO-1
+### PRO-1 - Done
 
 **As a student I can mark my progress of a codelab**
     
@@ -273,10 +273,10 @@
 | A student that did has put 3 of the 6 codelabs on 'Done' or 'Feedback Needed'<br/>I am logged in as a coach | Visiting the progress overview page | I see an half full progress bar under the student |
 | 6 students exist in the application<br/>I am logged in as a coach                                           | Visiting the progress overview page | I see the progress of 6 students                  |
 
-### CDD-1
+### CDD-1 - Done
 
 **As a student I can go to the detail of a codelab**
 
-### CDD-2
+### CDD-2 - Done
 
 **As a student I can add a personal comment to the detail of a codelab**
