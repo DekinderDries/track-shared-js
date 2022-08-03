@@ -6,6 +6,8 @@ You will build further on the project that a previous class delivered.
 
 [Frontend](https://github.com/switchfully/final-project-apr2022-frontend)
 
+[Board](https://miro.com/app/board/uXjVOz6MIfM=/)
+
 ## Stories
 
 ### HOM-1 - Done
