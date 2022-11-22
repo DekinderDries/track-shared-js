@@ -48,7 +48,7 @@ It's your job to implement this back-end.
 
 ## Architectural Setup
 
-Provide a multi-module setup where each module (not package) represents a 'layer'.
+You can optionally provide a multi-module setup where each module (not package) represents a 'layer'.
 - Although a layered architecture might not be the best architecture (for big projects), when used properly(!), it is actually 
 a nice way of separating concerns in your code. Read the following links:
     - http://www.codingthearchitecture.com/2016/04/25/layers_hexagons_features_and_components.html
