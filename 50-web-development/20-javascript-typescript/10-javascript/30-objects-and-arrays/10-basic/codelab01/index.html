@@ -36,7 +36,7 @@
         })
             .then(function (response) {
                 if (response.ok) return response.text();
-                throw new Error('Something went wrong.');
+                throw new Error(response.status);
             })
             .then(callBack)
             .catch(function (result) {
@@ -46,7 +46,9 @@
     }
 
     function addPerson() {
-        let newPerson; //initialize me
+        let newPerson = {
+            lastName: 'last'
+        }; //initialize me
         savePerson(newPerson, function () {
             document.getElementById('result').innerHTML = 'Success!'
         });
