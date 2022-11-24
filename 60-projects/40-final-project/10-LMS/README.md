@@ -1,8 +1,16 @@
 # Building a Learning Management System
 
+You will build further on the project that a previous class delivered.
+
+[Backend](https://github.com/switchfully/final-project-apr2022-backend)
+
+[Frontend](https://github.com/switchfully/final-project-apr2022-frontend)
+
+[Board](https://miro.com/app/board/uXjVOz6MIfM=/)
+
 ## Stories
 
-### HOM-1
+### HOM-1 - Done
 
 **As a visitor I will see the home page when visiting the LMS application**
 
@@ -11,7 +19,7 @@
 
 ![Home](images/home.png)
 
-### ACC-1
+### ACC-1 - Done
 
 **As a visitor I can register an account**
 
@@ -33,7 +41,7 @@
 | As a visitor I fill in two different passwords                                       | Clicking the register button | I get a message that the password do not match               |
 | As a visitor I fill an e-mail that is in the wrong format                            | Clicking the register button | I get a message that the e-mail is not correctly formatted   |
 
-### ACC-2
+### ACC-2 - Done
 
 **As a student I can log into my student account**
 
@@ -52,7 +60,7 @@
 | A student with a non-existing account | Going to the login page<br/>Filling in their credentials<br/>Pressing the login button | A warning message will appear: 'Invalid credentials'                                                                   |
 | A student with a existing account     | Going to the login page<br/>Filling in the wrong password                              | A warning message will appear: 'Invalid credentials'                                                                   |
 
-### ACC-3
+### ACC-3 - Done
 
 **As a student I can view my profile**
 
@@ -87,7 +95,7 @@
 | A student is on their edit profile page | Changing their email to an already existing email and pressing 'save'       | The student will get a warning message: 'email already exists'                                            |
 | A student is on their edit profile page | Changing their password but passwords do not match                          | The student will get a warning message: 'passwords do not match'                                          |
 
-### COA-1
+### COA-1 - Done
 
 **As a coach I can log into my account**
 
@@ -98,59 +106,123 @@
 
 **As a coach I can create a class**
 
+    Every coach can create a class. This class will be tied to that specific coach.
+    
+| Given                                   | When                                                                        | Then                                                                                                      |
+|-----------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| A coach is viewing his profile page     | When clicking the 'create class' button                                     | The coach is taken to the create class page   
+| A coach is in the create class page     | When entering a name and clicking the 'save' button                         | The class is saved and tied to the coach
+
 ### CLA-2
 
 **As a student I can choose my class in my profile**
+
+    Every student is a member of a class. The student can go to his/her profile and update it to match his/her corresponding class.
+
+| Given                                   | When                                                                        | Then                                                                                                      |
+|-----------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| A student is on his/her profile page    | When viewing his/her class                                                  | The student sees his/her class
+| A student edits his/her profile page    | When trying to select a class                                               | The student sees a list of classes and can select his/her class.
 
 ### CLA-3
 
 **As a student/coach I can view the class overview screen**
 
+    Every class has an overview screen. Both students and coaches can see the overview screen of their corresponding class. A class overview screen shows all students and coaches that are part of the class. Coaches should be able to click through to a specific student's profile page.
+    
+| Given                                   | When                                                                        | Then                                                                                                      |
+|-----------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| A coach is viewing his/her profile page  | When clicking a class tied to the coach                                     | The coach is taken to the class overview page   
+| A student is viewing his/her profile page| When clicking a class tied to the student                                   | The student is taken to the class overview 
+
+
 ### MOD-1
 
 **As a coach I can create a module**
+
+    Every coach can create a module. A module is a collection of sub-modules and codelabs connected to a specific course. For example: "Java Fundamentals"
+    
+| Given                                   | When                                                                        | Then                                                                                                      |
+|-----------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| A coach is on the course overview page  | When clicking the "create module" button                                    | The coach is taken to the create module page 
+| A coach is on the create module page    | When entering the module name                                               | The module is saved
 
 ### MOD-2
 
 **As a coach I can edit the name of a module**
 
+    Every coach can edit existing modules names.
+
 ### MOD-3
 
 **As a student I can get an overview of all modules**
+
+    Every student can see an overview of all available modules.
 
 ### SUB-1
 
 **As a coach I can create a sub-module**
 
+    Every coach can create sub-modules. A sub-module is a specific part of an upper-lying module. For example: Java Fundamentals is a module, Object-Oriented       Programming is a sub-module of said Java Fundamentals module.
+    
+| Given                                   | When                                                                        | Then                                                                                                      |
+|-----------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| A coach is on a module's overview page  | When clicking the "create sub-module" button                                    | The coach is taken to the create sub-module page 
+| A coach is on the create sub-module page| When entering the sub-module name                                               | The sub-module is saved and tied to the upper module
+
 ### SUB-2
 
 **As a coach I can edit the name of a sub-module**
 
+    Every coach can edit a sub-module's name.
 ### SUB-3
 
 **As a student I can get an overview of all sub-modules**
+
+    Every student can request an overview of all sub-modules.
 
 ### COU-1
 
 **As a coach I can create a course**
 
+    Every coach can create a course. A course contains connected modules and their sub-modules and codelabs.
+    
+| Given                                   | When                                                                        | Then                                                                                                      |
+|-----------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| A coach is on the main dashboard  | When clicking the "create course" button                                              | The coach is taken to the create course page 
+| A coach is on the create course page| When entering the course name                                               | The course is saved
+
 ### COU-2
 
 **As a coach I can edit the name of a course**
+
+    Every coach can edit the name of a course.
 
 ### COU-3
 
 **As a student I get an overview of all courses in a modules**
 
+    Every student can request an overview of all courses available in a module.
+
 ### COD-1
 
 **As a coach I can create a codelab**
+
+| Given                                   | When                                                                        | Then                                                                                                      |
+|-----------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| A coach is on the main dashboard  | When clicking the "create codelab" button                                              | The coach is taken to the create codelab page 
+| A coach is on the create codelab page| When entering the codelab name                                               | The codelab is saved
 
 ### COD-2
 
 **As a coach I edit a codelab**
 
-### COD-3
+| Given                                   | When                                                                        | Then                                                                                                      |
+|-----------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| A coach is on the codelab page  | When clicking the "edit codelab" button                                              | The coach is taken to the edit codelab page 
+| A coach is on the edit codelab page| When entering the codelab details (name, connections)                             | The codelab is saved
+
+### COD-3 - Done
 
 **As a student I can get an overview of all codelabs in a course**
 
@@ -164,7 +236,7 @@
 |       | I click on the overview link | I see an overview of all the courses |
 
 
-### PRO-1
+### PRO-1 - Done
 
 **As a student I can mark my progress of a codelab**
     
@@ -184,15 +256,15 @@
 
 ### PRO-2
 
-**As a student a course is marked as done if I have marked all codelabs of that course as done**
+**As a student a sub-module is marked as done if I have marked all codelabs of that course as done**
 
 ### PRO-3
 
-**As a student a sub-module is marked as done if I have marked all courses of that sub-module as done**
+**As a student a module is marked as done if I have marked all codelabs of that module as done**
 
 ### PRO-4
 
-**As a student a module is marked as done if I have marked all sub-modules of that module as done**
+**As a student a course is marked as done if I have marked all modules of that course as done**
 
 ### PRO-5
 **As a coach I can get an overview of the progress of all the students**
@@ -209,10 +281,10 @@
 | A student that did has put 3 of the 6 codelabs on 'Done' or 'Feedback Needed'<br/>I am logged in as a coach | Visiting the progress overview page | I see an half full progress bar under the student |
 | 6 students exist in the application<br/>I am logged in as a coach                                           | Visiting the progress overview page | I see the progress of 6 students                  |
 
-### CDD-1
+### CDD-1 - Done
 
 **As a student I can go to the detail of a codelab**
 
-### CDD-2
+### CDD-2 - Done
 
 **As a student I can add a personal comment to the detail of a codelab**
