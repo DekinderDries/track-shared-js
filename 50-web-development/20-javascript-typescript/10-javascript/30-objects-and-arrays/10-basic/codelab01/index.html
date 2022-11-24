@@ -34,6 +34,10 @@
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(personDTO)
         })
+            .then(function (response) {
+                if (response.ok) return response.text();
+                throw new Error('Something went wrong.');
+            })
             .then(callBack)
             .catch(function (result) {
                 document.getElementById('result').innerHTML = 'Failure!';
