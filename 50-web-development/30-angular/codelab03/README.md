@@ -121,6 +121,20 @@ the final parts. In the lowest level ``<div>``, we need to provide some changes 
   > 1. Define a block of HTML that determines how Angular renders a single item.  
   > 2. To list your items, assign the shorthand let item of items to *ngFor.
   > If you want more info on this, the Angular website has a more extensive explanation. For now, know that you can compare it to a foreach in Java.- 
+   
+### Set up the routing
+* The last thing that we need is to plug in the profile-gallery component in our app. To do this we'll let Angular automatically replace the `<router-outlet>`-tag with our `<app-profile-gallery>`-tag.
+Go to `app-routing.module.ts` and replace 
+
+```javascript 
+const routes: Routes = [];
+``` 
+with 
+```javascript
+const routes: Routes = [{path:'', component: ProfileGalleryComponent}];
+```
+
+* This will make it so that you automatically navigate to the ProfileGalleryComponent when opening your app. More on Routing later, this was just a sneak peek.
 
 ### Testing the result
 * Time to try out your code! Open up your localhost:4200 and see what it is you're showing on your screen. Not seeing any pets? Getting weird message about CORS and such? That is because we forgot one important thing. Our application needs to be "allowed" to talk to our 
