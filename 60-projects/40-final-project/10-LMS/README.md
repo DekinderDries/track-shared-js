@@ -2,11 +2,11 @@
 
 You will build further on the project that a previous class delivered.
 
-[Backend](https://github.com/switchfully/final-project-apr2022-backend)
+[Backend](https://github.com/switchfully/final-project-backend)
 
-[Frontend](https://github.com/switchfully/final-project-apr2022-frontend)
+[Frontend](https://github.com/switchfully/final-project-frontend)
 
-[Board](https://miro.com/app/board/uXjVOz6MIfM=/)
+[Board](https://miro.com/app/board/uXjVO5iZWjs=/)
 
 ## Stories
 
