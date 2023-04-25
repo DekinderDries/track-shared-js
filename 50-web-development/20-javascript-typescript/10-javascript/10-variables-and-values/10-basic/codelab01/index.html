@@ -38,12 +38,12 @@
 
     Assign the following text to each variable in the correct format: Your bill is ${23 + 25}
     */
-    let singleQuoteString;
-    let doubleQuoteString;
-    let backtickString;
+    let singleQuoteString = 'single-quotes-output';
+    let doubleQuoteString = "This is a double \" quote \" string";
+    let backtickString = `Your bill is ${23 + 25}`;
 
     document.getElementById('single-quotes-output').innerHTML = singleQuoteString;
-    document.getElementById('double-quotes-output').innerHTML = doubleQuoteString;
-    document.getElementById('backticks-output').innerHTML = backtickString;
+    document.getElementById("double-quotes-output").innerHTML = doubleQuoteString;
+    document.getElementById(`backticks-output`).innerHTML = backtickString;
 </script>
 </html>
